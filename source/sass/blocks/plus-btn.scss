@@ -1,0 +1,12 @@
+.plus-btn {
+  width: 3em;
+  height: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #F7B200 0%, #FFD866 100%);
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  box-shadow: -4px -4px 16px #FFFFFF, 4px 4px 16px rgba(96, 117, 128, 0.35);
+  border-radius: 50%;
+}

@@ -1,0 +1,137 @@
+.main-top {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5em;
+  z-index: 0;
+
+  h2 {
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 1.5em;
+    line-height: 100%;
+    color: $color-main--top;
+  }
+
+  .round {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.5em;
+    height: 4.5em;
+    background: linear-gradient(135deg, #F0F3F5 14.68%, #D0D8DB 85.17%);
+    box-shadow: -6px -6px 24px rgba(255, 255, 255, 0.8), 6px 6px 24px rgba(96, 117, 128, 0.25);
+    border-radius: 50%;
+    margin-left: 1em;
+    z-index: 0;
+    position: relative;
+
+    &:before {
+      height: 78%;
+      background: #E1E8EB;
+      box-shadow: 0px -10px 10px rgba(255, 255, 255, 0.15);
+      position: absolute;
+      width: 100vw;
+      left: 50%;
+      content: '';
+      z-index: -1;
+    }
+  }
+
+  span {
+    width: 3.5em;
+    height: 3.5em;
+    background: linear-gradient(135deg, #DAE2E6 0%, #E9EDF0 100%);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+  }
+}
+
+//  dark
+
+.main-top--dark  {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5em;
+
+  h2 {
+    color: $color-text--white;
+  }
+
+  .round {
+    background: linear-gradient(135deg, #575A6B 14.68%, #4B4E5E 85.17%);
+    box-shadow: -6px -6px 24px rgba(255, 255, 255, 0.07), 6px 6px 24px rgba(31, 33, 46, 0.25);
+
+    &:before {
+      background: #525566;
+      box-shadow: 0px -10px 10px rgba(255, 255, 255, 0.02);
+    }
+  }
+
+  span {
+    background: linear-gradient(135deg, #4E5161 0%, #56596B 100%);
+  }
+
+  .more-link a {
+    color: $color-text--white;
+  }
+}
+
+.main-top--light {
+
+  h2 {
+    color: $color-text--black;
+  }
+
+  .round {
+    background: linear-gradient(135deg, #FFFFFF 14.68%, #E6E6E6 85.17%);
+    box-shadow: -6px -6px 12px #FFFFFF, 6px 6px 24px rgba(0, 0, 0, 0.1);
+
+    &:before {
+      background: #F2F2F2;
+      box-shadow: 0px -10px 10px rgba(255, 255, 255, 0.4);
+    }
+  }
+
+  span {
+    background: linear-gradient(135deg, #F0F0F0 0%, #F7F7F7 100%);
+
+
+  }
+}
+
+
+.more-link {
+  position: absolute;
+  right: 1.875em;
+  top: 50%;
+  transform: translateY(-50%);
+
+  a {
+    font-family: $font-family--alt;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1em;
+    line-height: 100%;
+    text-align: right;
+    text-decoration-line: underline;
+    color: $color-text--black;
+    transition: all .4s;
+
+    &:hover {
+      color: #FFBB00;
+    }
+  }
+}
+
+
+
+
+
+

@@ -1,0 +1,37 @@
+.button-wrapp {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 38.0625em;
+  margin: 1em 0.9em 0.9em auto;
+}
+
+.grey-btn {
+  background: linear-gradient(135deg, #DAE2E6 0%, #E9EDF0 100%);
+  box-shadow: -4px -4px 16px rgba(255, 255, 255, 0.7), 4px 4px 16px rgba(96, 117, 128, 0.2);
+  border-radius: 4px;
+  height: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    margin-right: 0.75em;
+  }
+}
+
+.edit-config {
+  max-width: 16.3125em;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.add-config {
+  max-width: 21em;
+  width: 100%;
+  flex-shrink: 0;
+
+  &--plus {
+
+  }
+}

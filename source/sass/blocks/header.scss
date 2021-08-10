@@ -1,0 +1,38 @@
+.header-top {
+  padding: 0.375em 0;
+  background: $header--top;
+  h1 {
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 0.75em;
+    line-height: 100%;
+    text-align: center;
+    color: $color-text--white;
+  }
+}
+
+.header-wrapp {
+  background: $bg--header;
+  box-shadow: $header-shadow;
+}
+
+.header {
+  padding: 0.8125em 0 0.9375em;
+  display: flex;
+  height: 5.375em;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// .header-box {
+//   position: fixed;
+//   left: 50%;
+//   transform: translateX(-50%);
+//   width: 100%;
+//   z-index: 100;
+// }
+
+// .header-box.hide {
+
+// }
