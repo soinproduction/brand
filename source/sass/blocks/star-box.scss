@@ -24,11 +24,14 @@
   display: flex;
   align-items: center;
 
-  svg {
-    margin-left: 0.3125em;
-  }
 }
 
 .stars-list {
   display: flex;
+}
+
+.stars-list li {
+  &:not(:first-child) {
+    margin-left: 0.3125em;
+  }
 }

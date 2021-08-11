@@ -139,11 +139,12 @@ input[type="number"] {
   max-width: 58em;
   position: relative;
   margin: 0 auto;
+
+  &--mode {
+    max-width: 62em;
+  }
 }
 
-// main {
-//   margin-top: 110px;
-// }
 
 
 

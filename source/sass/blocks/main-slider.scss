@@ -203,7 +203,15 @@
     font-size: 0.75em;
     line-height: 130%;
     color: $color-text--black;
+
+    &:not(:first-child) {
+      margin-top: 1em ;
+    }
   }
+}
+
+.fift-slider {
+  margin-bottom: 4em;
 }
 
 .slide-bottom {
@@ -367,5 +375,21 @@
       background: linear-gradient(119.46deg, #575A6B 18.56%, #4D5061 63.68%);
       box-shadow: -4px -4px 16px rgba(255, 255, 255, 0.06), 4px 4px 16px rgba(31, 33, 46, 0.2);
     }
+  }
+}
+
+.main-slide__wrapper {
+  display: flex;
+  justify-content: space-between;
+  max-width: 21.875em;
+  margin-bottom: 12px;
+
+  h2 {
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 2.25em;
+    line-height: 100%;
+    color: $color-text--black;
   }
 }
