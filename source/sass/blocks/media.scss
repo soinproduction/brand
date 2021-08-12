@@ -1,26 +1,168 @@
 @media (min-width: 992px) and (max-width: 1199px) {
-
-
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-
-
-
 }
 
 
 @media (min-width: 576px) and (max-width: 767px) {
-
-
-
 }
 
 
 @media (min-width: 280px) and (max-width: 575px) {
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
 
+
+  .catalog-box__row {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    grid-gap: 30px 0;
+  }
+
+  .catalog-item--mini {
+    max-width: 48%;
+
+    .catalog-item__image img {
+      height: 35vw;
+      max-height: initial;
+    }
+  }
+
+  .catalog-box__row:not(:first-child) {
+    margin-top: 30px;
+  }
+
+  .catalog-item__image img {
+    height: 94vw;
+    max-height: initial;
+  }
+
+  .catalog-item__image {
+    width: 100%;
+    height: auto;
+    max-height: initial;
+  }
+
+  .catalog-item__bottom {
+    span {
+      display: none;
+    }
+  }
+
+  .main-top .round:before {
+    left: initial;
+    right: 50%;
+  }
+
+  .main-top h2 {
+    position: relative;
+    z-index: 2;
+  }
+
+  .main-slider {
+    margin: 0;
+  }
+
+  .main-top {
+    margin-bottom: 68px;
+  }
+
+  .container-slider {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .descr-text p {
+    display: none;
+  }
+
+  .main-slide__descr {
+    width: 100%;
+
+    h2 {
+      width: 80%;
+    }
+  }
+
+  .slider-wrapper .slider-arrows {
+    top: -4%;
+    border-radius: 0;
+    background: #E1E8EB;
+    box-shadow: 10px 10px 20px rgba(96, 117, 128, 0.05);
+
+    &:hover {
+      &::before {
+        box-shadow: none;
+        display: none;
+      }
+    }
+  }
+
+  .main-slide__image {
+    width: 100%;
+  }
+
+  .slider-wrapper .prev-arrow {
+    right: 35px;
+    left: initial;
+  }
+
+  .slider-wrapper .next-arrow {
+    right: 0;
+    left: initial;
+  }
+
+  .slide-bottom-main {
+    position: absolute;
+    bottom: 0;
+  }
+
+  .slide-bottom {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .slide-bottom__item:first-child {
+    width: 100%;
+  }
+
+  .solo-position {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .solo-position__descr {
+    flex-direction: column;
+    align-items: flex-start;
+    height: 80%;
+    justify-content: space-between;
+  }
+
+  .solo-position__img {
+    max-width: 53%;
+    position: initial;
+  }
+
+  .slide-bottom {
+    padding: 0;
+  }
+
+  .solo-position__descr h2 {
+    max-width: 100%;
+    // margin-bottom: 20%;
+  }
+
+  .solo-position__img span {
+    left: 58%;
+  }
 
 
 
 }
-

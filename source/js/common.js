@@ -15,13 +15,11 @@
         fade: true,
         responsive: [
           {
-            breakpoint: 992,
+            breakpoint: 1199,
             settings: {
               slidesToShow: 1,
               slidesToScroll: 1,
-              centerMode: true,
-              centerPadding: ("40px"),
-              initialSlide: 2,
+              dots: true,
             },
           },
         ],
@@ -294,18 +292,26 @@
   }
 
 
-  // var prevScrollpos = window.pageYOffset;
-  // window.onscroll = function() {
-  // var currentScrollPos = window.pageYOffset;
-  //   if (prevScrollpos > currentScrollPos) {
-  //     $(".header-box").removeClass("hide").slideDown('0');
-  //     $("main").css('margin-top', '105px')
-  //   } else {
-  //     $(".header-box").addClass("hide").slideUp('0');
-  //     $("main").css('margin-top', '0px')
-  //   }
-  //   prevScrollpos = currentScrollPos;
-  // }
+  var prevScrollpos = window.pageYOffset;
+  window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+      $(".header-box").removeClass("hide");
+      $(".main").css({
+        transform: 'translateY(86px)',
+        transition: '.4s'
+      });
+
+
+    } else {
+      $(".header-box").addClass("hide");
+      $(".main").css({
+        transform: 'translateY(0)',
+        transition: '.4s'
+      });
+    }
+    prevScrollpos = currentScrollPos;
+  }
 
 
 

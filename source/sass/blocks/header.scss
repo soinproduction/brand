@@ -25,14 +25,20 @@
   align-items: center;
 }
 
-// .header-box {
-//   position: fixed;
-//   left: 50%;
-//   transform: translateX(-50%);
-//   width: 100%;
-//   z-index: 100;
-// }
+.header-box {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  z-index: 100;
+  transition: .4s;
+}
 
-// .header-box.hide {
+.header-box.hide {
+  transform: translateX(-50%) translateY(-100%);
+}
 
-// }
+.main {
+  transition: .4s;
+  transform: translateY(86px),
+}
