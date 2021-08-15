@@ -22,26 +22,12 @@
 
 .solo-position__img {
   position: relative;
-
   padding: 0.625em;
 
   background: #e1e8eb;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 6px;
   box-shadow: -6px -6px 24px rgba(255, 255, 255, 0.7), 6px 6px 24px rgba(96, 117, 128, 0.2);
-
-  span {
-    position: absolute;
-    top: 0.625em;
-    left: 0.625em;
-
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 100%;
-    font-family: $font-family;
-    color: $color-text--black;
-  }
 }
 
 .solo-position__descr {
@@ -59,6 +45,19 @@
     font-family: $font-family;
     color: $color-text--black;
     max-width: 55%;
+  }
+
+  p {
+    position: absolute;
+    top: 0.625em;
+    left: 1.625em;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 100%;
+    font-family: $font-family;
+    color: $color-text--black;
   }
 }
 

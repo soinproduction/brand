@@ -298,7 +298,7 @@
     if (prevScrollpos > currentScrollPos) {
       $(".header-box").removeClass("hide");
       $(".main").css({
-        transform: 'translateY(86px)',
+        transform: 'translateY(5.375em)',
         transition: '.4s'
       });
 
@@ -312,6 +312,49 @@
     }
     prevScrollpos = currentScrollPos;
   }
+
+
+ const buttons = [...document.querySelectorAll(".mobile-replace")]; // --- масассив кнопок
+ const newBody = document.querySelector(".replace-btn");
+ const oldBody = document.querySelector(".main-slide__bottom");
+
+
+ console.log(newBody);
+
+
+ window.onload = function(){
+  if ( $(window).width() > 320 && $(window).width() < 768 ) {
+    buttons.forEach(function(button){   // i - index
+      newBody.insertAdjacentElement("afterbegin", button);
+    });
+  } else {
+
+    buttons.forEach(function(button){   // i - index
+      oldBody.insertAdjacentElement("afterbegin", button);
+    });
+
+  };
+ };
+
+window.addEventListener('resize', () => {
+  if ( $(window).width() < 768 ) {
+    buttons.forEach(function(button){   // i - index
+      newBody.insertAdjacentElement("afterbegin", button);
+    });
+  } else {
+
+    buttons.forEach(function(button){   // i - index
+      oldBody.insertAdjacentElement("afterbegin", button);
+    });
+
+  };
+
+
+});
+
+
+
+
 
 
 
