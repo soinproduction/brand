@@ -2,6 +2,7 @@
   display: flex;
   position: absolute;
   top: -4%;
+  left: 0;
   transform: translateY(-50%);
 
   li.slick-active button{
@@ -25,7 +26,6 @@
     font-size: 12px;
     line-height: 120%;
     color: rgba(0, 0, 0, 0.75);
-
 
   }
 

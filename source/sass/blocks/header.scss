@@ -41,5 +41,6 @@
 
 .main {
   transition: .4s;
-  transform: translateY(86px),
+  padding-top: 86px;
+  overflow-y: hidden;
 }

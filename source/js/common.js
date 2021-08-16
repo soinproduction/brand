@@ -1,5 +1,4 @@
 // -----------------  Слайдера --------------------
-
   const Sliders = {
     MAIN_SLIDER: {
       ELEMENT: $(".first-slider"),
@@ -42,13 +41,11 @@
         fade: true,
         responsive: [
           {
-            breakpoint: 992,
+            breakpoint: 1199,
             settings: {
               slidesToShow: 1,
               slidesToScroll: 1,
-              centerMode: true,
-              centerPadding: ("40px"),
-              initialSlide: 2,
+              dots: true,
             },
           },
         ],
@@ -72,13 +69,11 @@
         asNavFor: $(".nav-second"),
         responsive: [
           {
-            breakpoint: 992,
+            breakpoint: 1199,
             settings: {
               slidesToShow: 1,
               slidesToScroll: 1,
-              centerMode: true,
-              centerPadding: ("40px"),
-              initialSlide: 2,
+              dots: true,
             },
           },
         ],
@@ -132,13 +127,12 @@
         asNavFor: $(".nav-first"),
         responsive: [
           {
-            breakpoint: 992,
+            breakpoint: 1199,
             settings: {
               slidesToShow: 1,
               slidesToScroll: 1,
+              dots: true,
               centerMode: true,
-              centerPadding: ("40px"),
-              initialSlide: 2,
             },
           },
         ],
@@ -268,29 +262,6 @@
     $('.mobile-more__btn').removeClass("mobile-more__btn--active");
   });
 
-  $(".mobile-search__back").click(function () {
-    $('.mobile-search').removeClass("mobile-search--active");
-  });
-
-  // $("select").niceSelect();
-
-  $(this).find(".current-menu-ancestor > a").trigger("click");
-
-  $("sidebar-menu .menu-item-has-children > a").click(function (event) {
-    event.preventDefault();
-  });
-
-  $(".mobile-menu__list .menu-item-has-children > a").click(function (event) {
-    event.preventDefault();
-  });
-
-
-  function getMonthFormatted() {
-      const date = new Date();
-      const month = date.getMonth();
-      return month;
-  }
-
 
   var prevScrollpos = window.pageYOffset;
   window.onscroll = function() {
@@ -298,43 +269,42 @@
     if (prevScrollpos > currentScrollPos) {
       $(".header-box").removeClass("hide");
       $(".main").css({
-        transform: 'translateY(5.375em)',
-        transition: '.4s'
+        'padding-top': '86px',
+        'transition': '.4s'
       });
-
-
     } else {
       $(".header-box").addClass("hide");
       $(".main").css({
-        transform: 'translateY(0)',
-        transition: '.4s'
+        'padding-top': '0',
+        'transition': '.4s'
       });
     }
     prevScrollpos = currentScrollPos;
   }
-
 
  const buttons = [...document.querySelectorAll(".mobile-replace")]; // --- масассив кнопок
  const newBody = document.querySelector(".replace-btn");
  const oldBody = document.querySelector(".main-slide__bottom");
 
 
- console.log(newBody);
+const fifthBody = document.querySelector(".main-slide__descr--replace");
+ const imageBlock = document.querySelector(".main-slide__image--replace");
 
 
- window.onload = function(){
+ window.addEventListener('DOMContentLoaded', () => {
   if ( $(window).width() > 320 && $(window).width() < 768 ) {
     buttons.forEach(function(button){   // i - index
       newBody.insertAdjacentElement("afterbegin", button);
     });
-  } else {
 
+    fifthBody.insertAdjacentElement("afterbegin", imageBlock);
+
+  } else {
     buttons.forEach(function(button){   // i - index
       oldBody.insertAdjacentElement("afterbegin", button);
     });
-
   };
- };
+});
 
 window.addEventListener('resize', () => {
   if ( $(window).width() < 768 ) {
@@ -342,16 +312,36 @@ window.addEventListener('resize', () => {
       newBody.insertAdjacentElement("afterbegin", button);
     });
   } else {
-
     buttons.forEach(function(button){   // i - index
       oldBody.insertAdjacentElement("afterbegin", button);
     });
-
   };
-
-
 });
 
+
+
+
+
+// $('.top-all').click(function(e) {
+// 	e.preventDefault();
+
+// 	if(topHideItem) {
+// 		topFade = 0;
+// 		topHideItem = false;
+// 		$('.top-item_hide').fadeOut();
+// 		$(this).children('span').html('Больше портретов');
+// 		let top = $('.top').offset().top;
+// 		$('body,html').animate({scrollTop: top - 50}, 500);
+// 	} else {
+// 		topFade += 4;
+// 		$('.top-item_hide:lt('+topFade+')').fadeIn();
+// 		topHideItem = false;
+// 		if(topFade > topItem || topFade == topItem) {
+// 			$(this).children('span').html('Скрыть');
+// 			topHideItem = true;
+// 		}
+// 	}
+// });
 
 
 
