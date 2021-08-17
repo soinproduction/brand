@@ -111,6 +111,18 @@
 
   // mobile
 
+  .mobile-header {
+    display: flex;
+  }
+
+  .mobile-logo {
+    flex-grow: .8;
+
+    img {
+      width: 28%;
+    }
+  }
+
   .first-sec {
     .main-slide {
       padding-bottom: 15px;
@@ -797,6 +809,10 @@
 
   // mobile
 
+  .mobile-header {
+    display: flex;
+  }
+
   .first-sec {
     .main-slide {
       padding-bottom: 15px;
@@ -806,6 +822,8 @@
   .header-wrapp {
     display: none;
   }
+
+
 
   .catalog-box__row {
     display: grid;
@@ -1521,6 +1539,10 @@
 
 
   // mobile
+
+  .mobile-header {
+    display: flex;
+  }
 
   .header-wrapp {
     display: none;

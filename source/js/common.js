@@ -288,7 +288,7 @@
 
 
 const fifthBody = document.querySelector(".main-slide__descr--replace");
- const imageBlock = document.querySelector(".main-slide__image--replace");
+const imageBlock = document.querySelector(".main-slide__image--replace");
 
 
  window.addEventListener('DOMContentLoaded', () => {
@@ -334,29 +334,19 @@ window.addEventListener('resize', () => {
 });
 
 
+$(window).scroll(function(){
+  if($(this).scrollTop() > 500) {
+      $('.top-link').fadeIn();
+  } else {
+      $('.top-link').fadeOut();
+  }
+});
+$(".top-link']").click(function(){
+  var _href = $(this).attr("href");
+  $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
+  return false;
+});
 
-
-
-// $('.top-all').click(function(e) {
-// 	e.preventDefault();
-
-// 	if(topHideItem) {
-// 		topFade = 0;
-// 		topHideItem = false;
-// 		$('.top-item_hide').fadeOut();
-// 		$(this).children('span').html('Больше портретов');
-// 		let top = $('.top').offset().top;
-// 		$('body,html').animate({scrollTop: top - 50}, 500);
-// 	} else {
-// 		topFade += 4;
-// 		$('.top-item_hide:lt('+topFade+')').fadeIn();
-// 		topHideItem = false;
-// 		if(topFade > topItem || topFade == topItem) {
-// 			$(this).children('span').html('Скрыть');
-// 			topHideItem = true;
-// 		}
-// 	}
-// });
 
 
 
