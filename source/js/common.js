@@ -14,7 +14,7 @@
         fade: true,
         responsive: [
           {
-            breakpoint: 1199,
+            breakpoint: 768,
             settings: {
               slidesToShow: 1,
               slidesToScroll: 1,
@@ -41,7 +41,7 @@
         fade: true,
         responsive: [
           {
-            breakpoint: 1199,
+            breakpoint: 768,
             settings: {
               slidesToShow: 1,
               slidesToScroll: 1,
@@ -69,7 +69,7 @@
         asNavFor: $(".nav-second"),
         responsive: [
           {
-            breakpoint: 1199,
+            breakpoint: 768,
             settings: {
               slidesToShow: 1,
               slidesToScroll: 1,
@@ -97,7 +97,7 @@
         infinite: true,
         responsive: [
           {
-            breakpoint: 992,
+            breakpoint: 768,
             settings: {
               slidesToShow: 1,
               slidesToScroll: 1,
@@ -127,7 +127,7 @@
         asNavFor: $(".nav-first"),
         responsive: [
           {
-            breakpoint: 1199,
+            breakpoint: 768,
             settings: {
               slidesToShow: 1,
               slidesToScroll: 1,
@@ -156,7 +156,7 @@
         infinite: true,
         responsive: [
           {
-            breakpoint: 992,
+            breakpoint: 768,
             settings: {
               slidesToShow: 1,
               slidesToScroll: 1,
@@ -297,7 +297,7 @@ const fifthBody = document.querySelector(".main-slide__descr--replace");
       newBody.insertAdjacentElement("afterbegin", button);
     });
 
-    fifthBody.insertAdjacentElement("afterbegin", imageBlock);
+    // fifthBody.insertAdjacentElement("afterbegin", imageBlock);
 
   } else {
     buttons.forEach(function(button){   // i - index
@@ -305,6 +305,21 @@ const fifthBody = document.querySelector(".main-slide__descr--replace");
     });
   };
 });
+
+window.addEventListener('DOMContentLoaded', () => {
+  if ( $(window).width() > 320 && $(window).width() < 576 ) {
+    fifthBody.insertAdjacentElement("afterbegin", imageBlock);
+
+  } else {
+    // buttons.forEach(function(button){   // i - index
+    //   oldBody.insertAdjacentElement("afterbegin", button);
+    // });
+  };
+});
+
+
+
+
 
 window.addEventListener('resize', () => {
   if ( $(window).width() < 768 ) {
