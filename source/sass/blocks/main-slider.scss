@@ -35,7 +35,7 @@
     z-index: 20;
     border-radius: 50%;
     background: linear-gradient(135deg, #DAE2E6 0%, #E9EDF0 100%, #E9EDF0 100%);
-    box-shadow: -3px -3px 12px rgba(255, 255, 255, 0.7), 3px 3px 12px rgba(96, 117, 128, 0.2);
+    // box-shadow: -3px -3px 12px rgba(255, 255, 255, 0.7), 3px 3px 12px rgba(96, 117, 128, 0.2);
     width: 2.25em;
     height: 2.25em;
     display: flex;
@@ -46,22 +46,22 @@
       fill: #000;
     }
 
+    &:before {
+      content: '';
+      top: -0.1875em;
+      bottom: -0.1875em;
+      left: -0.1875em;
+      right: -0.1875em;
+      // background: #E1E7EB;
+      box-shadow: -3px -3px 12px rgba(255, 255, 255, 0.7), 3px 3px 12px rgba(96, 117, 128, 0.2);
+      position: absolute;
+      border-radius: 50%;
+      z-index: -1;
+    }
+
     &:hover {
       background: #E1E7EB;
       box-shadow: inset -2px -2px 6px rgba(255, 255, 255, 0.5), inset 2px 2px 6px rgba(96, 117, 128, 0.3);
-
-      &:before {
-        content: '';
-        top: -0.1875em;
-        bottom: -0.1875em;
-        left: -0.1875em;
-        right: -0.1875em;
-        background: #E1E7EB;
-        box-shadow: inset -2px -2px 6px rgba(255, 255, 255, 0.5), inset 2px 2px 6px rgba(96, 117, 128, 0.3);
-        position: absolute;
-        border-radius: 50%;
-        z-index: -1;
-      }
     }
   }
 
@@ -82,24 +82,29 @@
 
   .slider-arrows {
     top: 50%;
-    background: #55596A;
-    border: 3px solid #4d5162;
-    box-shadow: 3px 3px 12px rgba(31, 33, 46, 0.2);
+    background: linear-gradient(135deg, #535667 0%, #575B6B 100%);
     transition: all .4s;
 
     svg {
       fill: #fff;
     }
 
+    &:before {
+      content: '';
+      top: -0.1875em;
+      bottom: -0.1875em;
+      left: -0.1875em;
+      right: -0.1875em;
+      // background: #E1E7EB;
+      box-shadow: 3px 3px 12px rgba(31, 33, 46, 0.2);
+      position: absolute;
+      border-radius: 50%;
+      z-index: -1;
+    }
+
     &:hover {
-      background: #4D5061;
-      box-shadow: inset -3px -3px 12px rgba(255, 255, 255, 0.193), inset 3px 3px 4px rgba(31, 33, 46, 0.2), -1px -1px 8px 1px rgba(255, 255, 255, 0.248), 3px 3px 12px rgba(31, 33, 46, 0.152);
-      border-color: #4D5060;
-
-      &::before {
-        display: none;
-      }
-
+      background: linear-gradient(135deg, #4D5061 0%, #575B6B 100%);
+      box-shadow: -3px -3px 12px rgba(255, 255, 255, 0.05), 3px 3px 12px rgba(31, 33, 46, 0.2);
     }
 
   }
@@ -384,16 +389,6 @@
   width: 12.9375em;
   border: 2px solid #DFE6E9;
   position: relative;
-
-  &:before {
-    top: -3px;
-    left: -3px;
-    right: 0;
-    bottom: 0;
-    content: '';
-    position: absolute;
-    box-shadow: -3px -3px 12px rgba(255, 255, 255, 0.15), 3px 3px 12px rgba(31, 33, 46, 0.35);
-  }
 }
 
 .price-table--dark {

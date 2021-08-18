@@ -23,7 +23,9 @@ footer {
   background: linear-gradient(91.47deg, #EBEBEB 0%, #F2F2F2 100%);
   box-shadow: -3px -3px 12px rgba(255, 255, 255, 0.85), 3px 3px 12px rgba(0, 0, 0, 0.1);
   border-radius: 3px;
-  padding: 0.75em 1.5em;
+  padding: 1em 2em;
+  font-size: 0.75em;
+  line-height: 100%;
 
   &:not(:first-child) {
     margin-left: 1.5em;
@@ -73,6 +75,17 @@ footer {
   }
 
   li:not(:first-child) {
-    margin-top: 2.25em;
+    margin-top: 2.65em;
+  }
+}
+
+
+.footer-bottom__item {
+  &:nth-child(4) {
+    ul li {
+      &:last-child {
+        line-height: 140%;
+      }
+    }
   }
 }

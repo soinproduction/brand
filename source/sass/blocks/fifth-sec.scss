@@ -6,25 +6,42 @@
 .hard-slider {
   background: #F2F2F2;
   box-shadow: -6px -6px 24px #FFFFFF, 6px 6px 24px rgba(0, 0, 0, 0.1);
-  padding: 1.5em 1.5em 0;
+
+  .container-slider {
+    padding: 1.5em 1.5em 2.25em;
+  }
 }
 
 .slider-wrapper--fifth {
 
   .slider-arrows {
+    position: absolute;
+    width: 2.25em;
+    height: 2.25em;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-50%);
+    z-index: 20;
+    border-radius: 50%;
     top: 50%;
-    background: linear-gradient(135deg, #EDEDED 0%, #F7F7F7 100%);
-    box-shadow: -3px -3px 12px #FFFFFF, 3px 3px 12px rgba(0, 0, 0, 0.12);
-    transition: all .4s;
+    background: linear-gradient(135deg, #F0F0F0 0%, #F7F7F7 100%);
+
+
+    &:before {
+      content: '';
+      top: -0.1875em;
+      bottom: -0.1875em;
+      left: -0.1875em;
+      right: -0.1875em;
+      box-shadow: -3px -3px 12px #FFFFFF, 3px 3px 12px rgba(0, 0, 0, 0.12);
+      position: absolute;
+      border-radius: 50%;
+      z-index: -1;
+    }
 
     &:hover {
-      box-shadow: inset -4px -4px 8px #FFFFFF, inset 4px 4px 8px rgba(0, 0, 0, 0.1);
-      background: linear-gradient(135deg, #F0F0F0 0%, #F7F7F7 100%);
-
-      &::before {
-        background: linear-gradient(135deg, #EDEDED 0%, #F7F7F7 100%);
-        box-shadow: -3px -3px 12px #FFFFFF, 3px 3px 12px rgba(0, 0, 0, 0.12);
-      }
+      background: linear-gradient(135deg, #EDEDED 0%, #F7F7F7 100%);
+      box-shadow: -3px -3px 12px #FFFFFF, 3px 3px 12px rgba(0, 0, 0, 0.12);
     }
   }
 
