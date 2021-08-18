@@ -282,18 +282,18 @@
  const newBody = document.querySelector(".replace-btn");
  const oldBody = document.querySelector(".main-slide__bottom");
 
+ let slides = document.querySelectorAll(".fifth-slide");
+ const arrSlides = [...slides];
 
-const fifthBody = document.querySelector(".main-slide__descr--replace");
-const imageBlock = document.querySelector(".main-slide__image--replace");
+
+
 
 
  window.addEventListener('DOMContentLoaded', () => {
-  if ( $(window).width() > 320 && $(window).width() < 768 ) {
+  if ( $(window).width() >= 320 && $(window).width() < 768 ) {
     buttons.forEach(function(button){   // i - index
       newBody.insertAdjacentElement("afterbegin", button);
     });
-
-    // fifthBody.insertAdjacentElement("afterbegin", imageBlock);
 
   } else {
     buttons.forEach(function(button){   // i - index
@@ -302,15 +302,28 @@ const imageBlock = document.querySelector(".main-slide__image--replace");
   };
 });
 
+
+
+
 window.addEventListener('DOMContentLoaded', () => {
   if ( $(window).width() > 320 && $(window).width() < 576 ) {
-    fifthBody.insertAdjacentElement("afterbegin", imageBlock);
+    arrSlides.forEach(function(slide) {
+      const fifthBody = slide.querySelector(".main-slide__descr--replace");
+      const imageBlock = slide.querySelector(".main-slide__image--replace");
+      fifthBody.insertAdjacentElement("afterbegin", imageBlock);
+    });
+  }
+});
 
-  } else {
-    // buttons.forEach(function(button){   // i - index
-    //   oldBody.insertAdjacentElement("afterbegin", button);
-    // });
-  };
+window.addEventListener('resize', () => {
+  if ( $(window).width() > 320 && $(window).width() < 576 ) {
+    arrSlides.forEach(function(slide) {
+      const fifthBody = slide.querySelector(".main-slide__descr--replace");
+      const imageBlock = slide.querySelector(".main-slide__image--replace");
+      fifthBody.insertAdjacentElement("afterbegin", imageBlock);
+
+    });
+  }
 });
 
 window.addEventListener('resize', () => {
@@ -376,10 +389,6 @@ $("a[href='#top']").click(function() {
 // }
 
 // viewMoreButton.addEventListener('click', viewMoreButtonClickHandler)
-
-
-
-
 
 
 
