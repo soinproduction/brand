@@ -1,0 +1,143 @@
+.catalog-slide--big {
+
+  .catalog-inner {
+    flex-direction: column;
+  }
+
+  .catalog-wrapp {
+    flex-direction: column;
+    max-width: 100%;
+
+    .sales-box {
+      position: absolute;
+      top: 1.5em;
+      left: 30%;
+    }
+
+    .catalog-wrapp__btn {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      margin-top: 10.1em;
+    }
+  }
+
+  .big-catalog {
+    max-width: 100%;
+    margin: 100px 0 70px;
+  }
+
+  .big-catalog__top {
+    max-width: 40%;
+  }
+
+  @media (min-width: 320px) and (max-width: 575px) {
+    .catalog-inner {
+      flex-direction: column;
+    }
+
+    .catalog-wrapp {
+      flex-direction: column;
+      max-width: 100%;
+
+      .sales-box {
+        position: initial;
+        top: 1.5em;
+        left: 30%;
+      }
+
+      .catalog-wrapp__btn {
+        position: initial;
+        left: 50%;
+        top: 0;
+        margin: 0;
+        margin-left: 70px;
+      }
+    }
+
+    .big-catalog {
+      max-width: 100%;
+      margin: 0;
+    }
+
+    .big-catalog__top {
+      max-width: 100%;
+    }
+  }
+
+
+  @media (min-width: 576px) and (max-width: 767px) {
+
+    .catalog-inner {
+      flex-direction: column;
+    }
+
+    .catalog-wrapp {
+      flex-direction: column;
+      max-width: 100%;
+
+      .sales-box {
+        position: absolute;
+        top: 0;
+        left: 45%;
+      }
+
+      .catalog-wrapp__btn {
+        position: absolute;
+        left: 75%;
+        top: 0;
+        margin-top: 8.6em;
+      }
+    }
+
+    .big-catalog {
+      max-width: 100%;
+      margin: 70px 0 20px;
+    }
+
+    .big-catalog__top {
+      max-width: 100%;
+    }
+  }
+
+
+  @media (min-width: 768px) and (max-width: 991px) {
+
+    .catalog-inner {
+      flex-direction: column;
+    }
+
+    .catalog-wrapp {
+      flex-direction: column;
+      max-width: 100%;
+
+      .sales-box {
+        position: absolute;
+        top: 0;
+        left: 45%;
+      }
+
+      .catalog-wrapp__btn {
+        position: absolute;
+        left: 72%;
+        top: 0;
+        margin-top: 8.6em;
+      }
+    }
+
+    .big-catalog {
+      max-width: 100%;
+      margin: 70px 0 20px;
+    }
+
+    .big-catalog__top {
+      max-width: 100%;
+    }
+  }
+
+}
+
+
+
+
+

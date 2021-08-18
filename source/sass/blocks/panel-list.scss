@@ -18,6 +18,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    .svg-active {
+      display: none;
+    }
   }
 
   li:hover {
@@ -77,5 +81,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+}
+
+.heart-active {
+
+  svg {
+    display: none;
+  }
+
+  .svg-active {
+    display: block !important;
   }
 }

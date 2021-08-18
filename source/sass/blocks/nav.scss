@@ -71,4 +71,154 @@
   align-items: center;
 }
 
+.top-nav__item:hover {
+  & > a {
+    color: #E5A900;
+  }
+}
+
+.top-nav__item--mode:hover {
+
+  & > a {
+    font-weight: 600;
+    color: #000000;
+  }
+
+  .top-nav__hover {
+    display: block;
+  }
+}
+
+
+.top-nav__hover {
+  position: absolute;
+  transform: translateY(5%);
+  display: none;
+  z-index: 10;
+  background: #FCFCFC;
+  mix-blend-mode: normal;
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  max-width: 14em;
+  width: 100%;
+
+  li + li {
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+  }
+
+  li > p, span {
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1em;
+    line-height: 100%;
+    color: #000000;
+  }
+
+  li > p {
+    margin-bottom: 0.66em;
+  }
+
+  .roms-adres {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1em;
+    line-height: 100%;
+    text-decoration-line: underline;
+    color: #218CD9;
+    margin-bottom: 0.66em;
+
+    svg {
+      margin-right: .3em;
+    }
+  }
+
+  .star-hover {
+    display: flex;
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1em;
+    line-height: 100%;
+    color: #FFBC00;
+    margin-bottom: 0.7em;
+  }
+
+  .stars-hover__list {
+    display: flex;
+    margin-left: 0.25em;
+
+    li + li {
+      margin-left: 0.25em;
+    }
+  }
+}
+
+.top-nav__hover > li {
+  padding: 0.83em 1.33em;
+}
+
+.bottom-nav__item:hover {
+  a {
+    color: #E5A900;
+  }
+}
+
+.bottom-nav__item--catalog:hover {
+  position: relative;
+  z-index: 0;
+  & > a {
+    color: #000;
+    font-weight: 900;
+  }
+
+  position: relative;
+
+  &::before {
+    top: -0.5em;
+    bottom: -0.5em;
+    left: - 1em;
+    right:  -1em;
+    position: absolute;
+    content: '';
+    background: #F5F5F5;
+    box-shadow: inset -4px -4px 8px rgba(255, 255, 255, 0.3), inset 4px 4px 8px rgba(0, 0, 0, 0.03);
+    border-radius: 3px;
+    z-index: -1;
+  }
+}
+
+
+.basket-active {
+  position: relative;
+
+
+  span {
+    border-radius: 50%;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: #FFBC00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: $font-family--alt;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 100%;
+    color: #000000;
+    right: -5px;
+    top: -5px;
+  }
+}
+
+.heart-active {
+
+}
+
 

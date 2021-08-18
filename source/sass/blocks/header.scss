@@ -27,20 +27,19 @@
 
 .header-box {
   position: fixed;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  z-index: 100;
-  transition: .4s;
+	top: 0;
+  left: 0;
+	width: 100%;
+	transition: all 1s;
+  z-index: 200;
 }
 
-.header-box.hide {
-  transition: .4s;
-  transform: translateX(-50%) translateY(-100%);
+.header-box.out {
+  transform: translateY(-100%);
 }
 
 .main {
-  transition: .4s;
   padding-top: 86px;
   overflow-y: hidden;
 }
+
