@@ -102,7 +102,7 @@
   max-width: 14em;
   width: 100%;
 
-  li + li {
+  & > li + li {
     border-top: 1px solid rgba(0, 0, 0, 0.2);
   }
 
@@ -152,8 +152,9 @@
     display: flex;
     margin-left: 0.25em;
 
-    li + li {
+    & > li + li {
       margin-left: 0.25em;
+
     }
   }
 }

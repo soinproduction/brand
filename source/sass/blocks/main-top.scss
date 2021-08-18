@@ -49,6 +49,19 @@
     align-items: center;
     position: relative;
 
+    &:before {
+     top: -0.5em;
+     left: -0.5em;
+     bottom: -0.5em;
+     right: -0.5em;
+     content: '';
+     position: absolute;
+     background: linear-gradient(135deg, #F0F3F5 14.68%, #D0D8DB 85.17%);
+      box-shadow: -6px -6px 24px rgba(255, 255, 255, 0.8), 6px 6px 24px rgba(96, 117, 128, 0.25);
+      z-index: -1;
+      border-radius: 50%;
+    }
+
   }
 }
 
@@ -76,6 +89,11 @@
 
   span {
     background: linear-gradient(135deg, #4E5161 0%, #56596B 100%);
+
+    &:before {
+      background: linear-gradient(135deg, #575A6B 14.68%, #4B4E5E 85.17%);
+      box-shadow: -6px -6px 24px rgba(255, 255, 255, 0.07), 6px 6px 24px rgba(31, 33, 46, 0.25);
+    }
   }
 
   .more-link a {
@@ -91,7 +109,7 @@
 
   .round {
     background: linear-gradient(135deg, #FFFFFF 14.68%, #E6E6E6 85.17%);
-    box-shadow: -6px -6px 12px #FFFFFF, 6px 6px 24px rgba(0, 0, 0, 0.1);
+    // box-shadow: -6px -6px 12px #FFFFFF, 6px 6px 24px rgba(0, 0, 0, 0.1);
 
     &:before {
       background: #F2F2F2;
@@ -102,7 +120,10 @@
   span {
     background: linear-gradient(135deg, #F0F0F0 0%, #F7F7F7 100%);
 
-
+    &::before {
+      background: linear-gradient(135deg, #FFFFFF 14.68%, #E6E6E6 85.17%);
+box-shadow: -6px -6px 12px #FFFFFF, 6px 6px 24px rgba(0, 0, 0, 0.1);
+    }
   }
 }
 
@@ -211,6 +232,35 @@
 
   span {
     box-shadow: -6px -6px 12px #FFFFFF, 6px 6px 24px rgba(0, 0, 0, 0.12) !important;
+
+    &::before {
+      background: linear-gradient(135deg, #FFFFFF 15.86%, #E0E0E0 83.98%);
+      box-shadow: -6px -6px 12px #FFFFFF, 6px 6px 24px rgba(0, 0, 0, 0.12);
+    }
+  }
+}
+
+
+
+.fifth-sec  .main-top{
+
+  span {
+    box-shadow: -6px -6px 12px #FFFFFF, 6px 6px 24px rgba(0, 0, 0, 0.12) !important;
+
+    &::before {
+      background: linear-gradient(135deg, #F0F0F0 0%, #F7F7F7 100%);
+    }
+  }
+}
+
+.sixth-sec  .main-top{
+
+  span {
+    box-shadow: -6px -6px 12px #FFFFFF, 6px 6px 24px rgba(0, 0, 0, 0.12) !important;
+
+    &::before {
+      background: linear-gradient(135deg, #F0F0F0 0%, #F7F7F7 100%);
+    }
   }
 }
 

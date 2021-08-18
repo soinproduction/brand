@@ -16,7 +16,7 @@
 
     .catalog-wrapp__btn {
       position: absolute;
-      left: 50%;
+      left: 52%;
       top: 0;
       margin-top: 10.1em;
     }
@@ -27,8 +27,23 @@
     margin: 100px 0 70px;
   }
 
+  .stock-bottom__right {
+    display: flex;
+    justify-content: flex-end;
+  }
+
   .big-catalog__top {
     max-width: 40%;
+  }
+
+  .more-sales--hide {
+    background: linear-gradient(135deg, #F0F0F0 0%, #F7F7F7 100%);
+    box-shadow: -4px -4px 12px #FFFFFF, 4px 4px 16px rgba(0, 0, 0, 0.1);
+    color: #000;
+
+    svg {
+      margin-left: .5em;
+    }
   }
 
   @media (min-width: 320px) and (max-width: 575px) {
@@ -136,7 +151,6 @@
   }
 
 }
-
 
 
 
