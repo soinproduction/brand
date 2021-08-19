@@ -1,0 +1,46 @@
+use #valm {
+  width: 10px !important;
+}
+
+.descr-bottom__top {
+
+  svg {
+    height: 1em;
+    fill: currentColor;
+    width: .57em;
+    margin-left: .2em;
+  }
+}
+
+.price-new {
+  svg {
+    height: 1em;
+    margin-left: .2em;
+    width: .57em;
+  }
+}
+
+.main-price {
+  svg {
+    height: 1em;
+    margin-left: .2em;
+    width: .5em;
+  }
+}
+
+.mini-old {
+  display: flex;
+  align-items: center;
+  svg {
+    height: 1em;
+    margin-left: .2em;
+    width: .5em;
+  }
+}
+
+.price-table--dark {
+  svg {
+    fill: currentColor;
+  }
+}
+
