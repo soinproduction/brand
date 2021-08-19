@@ -145,7 +145,12 @@
 }
 
 .feedback-info__right a:hover {
-  border: 1px solid #E5A900;
+  box-shadow: none;
+  &:before {
+    background: #E5A900;
+    box-shadow: -5px -5px 10px #FFFFFF, 4px 4px 16px rgba(0, 0, 0, 0.15);
+  }
+
 }
 
 .feedback-box__list li:hover p {

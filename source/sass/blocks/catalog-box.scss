@@ -133,6 +133,16 @@
   box-shadow: -6px -6px 24px #FFFFFF, 6px 6px 24px rgba(0, 0, 0, 0.1);
 }
 
+.big-catalog .sales-box__top span {
+
+  width: 3em;
+  height: 3em;
+
+  &::before {
+    display: none !important;
+  }
+}
+
 .sales-box__top {
   display: flex;
   align-items: center;

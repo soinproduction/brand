@@ -3,6 +3,28 @@
     font-size: 20px;
   }
 
+  .tel-box {
+    svg:last-of-type {
+      margin-top: 1px;
+    }
+  }
+
+  .stars-list {
+    margin-left: 5px;
+
+    li {
+    display: flex;
+    }
+  }
+
+  .feedback-box__item .stars-list {
+    margin: 7px 0;
+  }
+
+  svg, .favorite-bnt--active:before {
+    transform: scale(1.3);
+  }
+
   .main-slider {
     margin-top: -20px;
   }

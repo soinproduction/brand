@@ -2,22 +2,26 @@
   position: relative;
 
   svg {
-    fill: currentColor;
+    fill: #808080;
   }
 
   .select__current {
     font-family: $font-family;
     font-style: normal;
     font-weight: 600;
-    font-size: 12px;
+    font-size: 0.75em;
     line-height: 100%;
 
-    color: $color-nav--top;
+    color: #808080;
   }
 
   &:hover {
     .select__header, .select__current {
       color: #E5A900 !important;
+    }
+
+    svg {
+      fill: #E5A900;
     }
   }
 
@@ -47,10 +51,10 @@
       font-family: $font-family;
       font-style: normal;
       font-weight: 600;
-      font-size: 12px;
+      font-size: 0.75em;
       line-height: 100%;
 
-      color: $color-nav--top;
+      color: #808080;
 
       &:not(:first-child) {
         margin-top: 5px;
