@@ -3,9 +3,30 @@
     font-size: 20px;
   }
 
+  .main-slide__descr {
+    .stars-list {
+      margin: 0 7px;
+    }
+  }
+
+  .first-top {
+    .main-top {
+      margin-left: -13px;
+    }
+  }
+
+  .main {
+    padding-top: 138px;
+  }
+
+  .big-body__item {
+    height: 10em;
+  }
+
+
   .tel-box {
-    svg:last-of-type {
-      margin-top: 1px;
+    svg:first-of-type {
+      margin-top: -1px;
     }
   }
 
@@ -112,13 +133,16 @@
 
 
   .main-price svg, .mini-old svg {
-    margin-top: 3px;
+    margin-top: 0;
+    margin-left: .2em !important;
     width: .4em;
   }
 
-
-
-
+  .price-old svg {
+    height: 17px;
+    margin-left: -4px;
+    width: .4em;
+  }
 
  }
 
@@ -144,6 +168,12 @@
   .header__logo {
     width: 16%;
     align-self: flex-start;
+  }
+
+  .first-top {
+    .main-top {
+      margin-left: -11px;
+    }
   }
 
   .slide-bottom__item:first-child {

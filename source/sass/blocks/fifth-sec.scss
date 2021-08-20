@@ -24,7 +24,7 @@
     z-index: 20;
     border-radius: 50%;
     top: 50%;
-    background: linear-gradient(135deg, #F0F0F0 0%, #F7F7F7 100%);
+    background: linear-gradient(135deg, #EDEDED 0%, #F7F7F7 100%);
 
 
     &:before {
@@ -33,15 +33,21 @@
       bottom: -0.1875em;
       left: -0.1875em;
       right: -0.1875em;
-      box-shadow: -3px -3px 12px #FFFFFF, 3px 3px 12px rgba(0, 0, 0, 0.12);
+     background: linear-gradient(135deg, #FAFAFA 0%, #E8E8E8 100%);
+box-shadow: -3px -3px 12px #FFFFFF, 3px 3px 12px rgba(0, 0, 0, 0.12);
       position: absolute;
       border-radius: 50%;
       z-index: -1;
     }
 
     &:hover {
-      background: linear-gradient(135deg, #EDEDED 0%, #F7F7F7 100%);
-      box-shadow: -3px -3px 12px #FFFFFF, 3px 3px 12px rgba(0, 0, 0, 0.12);
+      background: linear-gradient(135deg, #F0F0F0 0%, #F7F7F7 100%);
+      box-shadow: inset -4px -4px 8px #FFFFFF, inset 4px 4px 8px rgba(0, 0, 0, 0.1);
+
+      &:before {
+        background: linear-gradient(135deg, #EDEDED 0%, #F7F7F7 100%);
+box-shadow: -3px -3px 12px #FFFFFF, 3px 3px 12px rgba(0, 0, 0, 0.12);
+      }
     }
   }
 
