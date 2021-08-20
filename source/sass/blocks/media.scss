@@ -15,12 +15,25 @@
     }
   }
 
+  .telegram-icon, .hover-arrow {
+    margin-left: .1875em;
+  }
+
+  .hover-list__item>a svg {
+    margin-left: 0.3em;
+  }
+
   .main {
     padding-top: 138px;
   }
 
   .big-body__item {
     height: 10em;
+  }
+
+  .top-nav__hover li>p, .top-nav__hover span {
+    font-size: .75em;
+    color: #000;
   }
 
 
@@ -143,6 +156,38 @@
     margin-left: -4px;
     width: .4em;
   }
+
+
+  .info-nav__child+.info-nav__child {
+    margin-left: .9em;
+  }
+
+  .work-info p {
+    line-height: 120%;
+  }
+
+  .hover-list {
+    left: -5px;
+    border-top: 3px transparent solid;
+  }
+
+  .top-nav__item--mode {
+    position: relative;
+  }
+
+  .top-nav__hover {
+    width: 11em;
+    left: -27px;
+  }
+
+  .top-nav__hover .roms-adres, .top-nav__hover .star-hover {
+    font-size: .75em;
+  }
+
+  .top-nav__hover .star-hover {
+    margin-bottom: .3em;
+  }
+
 
  }
 

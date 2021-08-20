@@ -11,6 +11,10 @@
   z-index: 10;
 }
 
+.telegram-icon {
+  display: none;
+}
+
 .tel-box {
   position: relative;
 
@@ -21,8 +25,12 @@
       }
       color: $color-text--black;
 
-      svg:last-of-type {
-        transform: scaleY(-1);
+      .telegram-icon {
+        display: block;
+      }
+
+      .hover-arrow {
+        display: none;
       }
     }
 

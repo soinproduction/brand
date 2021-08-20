@@ -35,7 +35,8 @@
     transform: translateY(-50%);
     z-index: 20;
     border-radius: 50%;
-    background: linear-gradient(135deg, #DAE2E6 0%, #E9EDF0 100%, #E9EDF0 100%);
+    // background: linear-gradient(135deg, #DAE2E6 0%, #E9EDF0 100%, #E9EDF0 100%);
+    background: red !important;
     width: 2.25em;
     height: 2.25em;
     display: flex;
@@ -46,17 +47,19 @@
       fill: #000;
     }
 
-    &:before {
+    &::before {
       content: '';
       top: -0.1875em;
       bottom: -0.1875em;
       left: -0.1875em;
       right: -0.1875em;
+      border-radius: 50%;
       background: linear-gradient(135deg, #EBEEF0 18.51%, #D8E1E6 81.34%);
-      box-shadow: -3px -3px 12px rgba(255, 255, 255, 0.7), 3px 3px 12px rgba(96, 117, 128, 0.2);
+      box-shadow: -3px -3px 12px rgba(255, 255, 255, 0.7), 3px 3px 12px rgba(96, 117, 128,
+      0.2);
       position: absolute;
       border-radius: 50%;
-      z-index: -1;
+      z-index: -100;
     }
 
     &:hover {

@@ -237,6 +237,10 @@
     box-shadow: none;
     background: transparent;
 
+    img {
+      width: 100%;
+    }
+
     &::before {
       background: linear-gradient(135deg, #FFFFFF 14.68%, #E6E6E6 85.17%);
       box-shadow: -6px -6px 12px #FFFFFF, 6px 6px 24px rgba(0, 0, 0, 0.1);
