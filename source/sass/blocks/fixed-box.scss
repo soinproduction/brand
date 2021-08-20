@@ -13,31 +13,27 @@
 .top-link {
   margin-bottom: -1.25em;
   display: none;
-  width: 2.25em;
-  height: 2.25em;
+  width: 2.5em;
+  height: 2.5em;
   border-radius: 50%;
-  background: linear-gradient(135deg, #F2F2F2 0%, #FCFCFC 100%);
+  background: linear-gradient(135deg, #FFFFFF 14.6%, #F0F0F0 85.05%);
+  box-shadow: -3px -3px 12px rgba(255, 255, 255, 0.05), 3px 3px 12px rgba(0, 0, 0, 0.08);
   position: relative;
   z-index: 100;
 
-
-  svg {
+  div {
+    display: flex;
     position: absolute;
-    top: 50%;
-    transform: translate(-50% , -50%);
     left: 50%;
-  }
-
-  &:before {
-    content: '';
-    top: -0.1875em;
-    bottom: -0.1875em;
-    left: -0.1875em;
-    right: -0.1875em;
-    box-shadow: -3px -3px 12px rgba(255, 255, 255, 0.05), 3px 3px 12px rgba(0, 0, 0, 0.08);
-    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    justify-content: center;
     border-radius: 50%;
-    z-index: -1;
+    width: 2.25em;
+    height: 2.25em;
+    background: linear-gradient(135deg, #F2F2F2 0%, #FCFCFC 100%);
+    border-radius: 50%;
   }
 }
 
@@ -51,10 +47,11 @@
 }
 
 .round-link {
-  width: 2.25em;
-  height: 2.25em;
+  width: 2.5em;
+  height: 2.5em;
   border-radius: 50%;
-  background: linear-gradient(135deg, #F2F2F2 0%, #FCFCFC 100%);
+  background: linear-gradient(135deg, #FFFFFF 14.6%, #F0F0F0 85.05%);
+  box-shadow: -3px -3px 12px rgba(255, 255, 255, 0.05), 3px 3px 12px rgba(0, 0, 0, 0.08);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -63,8 +60,8 @@
   span {
     border-radius: 50%;
     position: absolute;
-    width: 1em;
-    height: 1em;
+    width: 1.5em;
+    height: 1.5em;
     background: #FFBC00;
     display: flex;
     justify-content: center;
@@ -79,16 +76,18 @@
     top: 0.125em;
   }
 
-  &:before {
-    content: '';
-    top: -0.1875em;
-    bottom: -0.1875em;
-    left: -0.1875em;
-    right: -0.1875em;
-    box-shadow: -3px -3px 12px rgba(255, 255, 255, 0.05), 3px 3px 12px rgba(0, 0, 0, 0.08);
+  div {
+    display: flex;
     position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    justify-content: center;
     border-radius: 50%;
-    z-index: -1;
+    width: 2.25em;
+    height: 2.25em;
+    background: linear-gradient(135deg, #F2F2F2 0%, #FCFCFC 100%);
   }
 }
 

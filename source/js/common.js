@@ -302,6 +302,19 @@
   };
 });
 
+window.addEventListener('DOMContentLoaded', () => {
+  if ( $(window).width() >= 320 && $(window).width() < 576 ) {
+    arrSlides.forEach(function(slide) {
+      const fifthBody = slide.querySelector(".main-slide__descr--replace");
+      const imageBlock = slide.querySelector(".main-slide__image--replace");
+      fifthBody.insertAdjacentElement("afterbegin", imageBlock);
+    });
+
+  } else {
+    return
+  };
+});
+
 
 
 
@@ -321,7 +334,7 @@ window.addEventListener('resize', () => {
       const fifthBody = slide.querySelector(".main-slide__descr--replace");
       const imageBlock = slide.querySelector(".main-slide__image--replace");
       fifthBody.insertAdjacentElement("afterbegin", imageBlock);
-
+      return
     });
   }
 });

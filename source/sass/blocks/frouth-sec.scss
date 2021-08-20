@@ -5,8 +5,8 @@
 
   .slider-arrows {
     position: absolute;
-    width: 2.25em;
-    height: 2.25em;
+    width: 2.5em;
+    height: 2.5em;
     align-items: center;
     justify-content: center;
     transform: translateY(-50%);
@@ -16,30 +16,29 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #EDEDED 0%, #F7F7F7 100%);
+    background: linear-gradient(135deg, #FAFAFA 0%, #E8E8E8 100%);
+    box-shadow: -3px -3px 12px #FFFFFF, 3px 3px 12px rgba(0, 0, 0, 0.12);
 
-
-    &:before {
-      content: '';
-      top: -0.1875em;
-      bottom: -0.1875em;
-      left: -0.1875em;
-      right: -0.1875em;
-      background: linear-gradient(135deg, #FAFAFA 0%, #E8E8E8 100%);
-      box-shadow: -3px -3px 12px #FFFFFF, 3px 3px 12px rgba(0, 0, 0, 0.12);
-      position: absolute;
+    span {
+      transition: all .4s;
+      width: 2.2em;
+      height: 2.2em;
       border-radius: 50%;
-      z-index: -1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #EDEDED 0%, #F7F7F7 100%);
     }
 
     &:hover {
-      background: linear-gradient(135deg, #F0F0F0 0%, #F7F7F7 100%);
-      box-shadow: inset -4px -4px 8px #FFFFFF, inset 4px 4px 8px rgba(0, 0, 0, 0.1);
+      background: linear-gradient(135deg, #EDEDED 0%, #F7F7F7 100%);
+      box-shadow: -3px -3px 12px #FFFFFF, 3px 3px 12px rgba(0, 0, 0, 0.12);
 
-      &:before {
-        background: linear-gradient(135deg, #EDEDED 0%, #F7F7F7 100%);
-        box-shadow: -3px -3px 12px #FFFFFF, 3px 3px 12px rgba(0, 0, 0, 0.12);
+      span {
+        background: linear-gradient(135deg, #F0F0F0 0%, #F7F7F7 100%);
+        box-shadow: inset -4px -4px 8px #FFFFFF, inset 4px 4px 8px rgba(0, 0, 0, 0.1);
       }
+
     }
 
   }

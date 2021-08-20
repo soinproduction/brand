@@ -148,7 +148,7 @@
   .main-price svg, .mini-old svg {
     margin-top: 0;
     margin-left: .2em !important;
-    width: .4em;
+    width: .42em;
   }
 
   .price-old svg {
@@ -194,8 +194,9 @@
 
  @media (min-width: 280px) and (max-width: 991px) {
   .slider-arrows {
-    &::before {
-      display: none !important;
+    span {
+      background: transparent !important;
+      border-radius: 0 !important;
     }
   }
  }
@@ -2114,7 +2115,7 @@
 
       flex-direction: row;
       flex-wrap: wrap;
-      justify-content: flex-start;
+      justify-content: center;
       width: 100%;
 
       grid-gap: 24px;
@@ -2122,6 +2123,8 @@
 
     .container-slider {
       padding-bottom: 250px;
+      padding-left: 0;
+      padding-right: 0;
     }
 
     .price-table--dark {
@@ -2144,11 +2147,11 @@
       max-width: 100%;
     }
 
-    .price-new::before {
-      left: 0;
+    // .price-new::before {
+    //   left: 0;
 
-      border-radius: 12px 12px 0 0;
-    }
+    //   border-radius: 12px 12px 0 0;
+    // }
   }
 
   .slider-nav {
@@ -2268,7 +2271,7 @@
 
     .slick-dots {
       left: 6px;
-      top: -2.5%;
+      top: -4.5%;
 
       li.slick-active button {
         font-weight: 600;
