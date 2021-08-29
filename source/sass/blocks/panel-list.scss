@@ -3,15 +3,15 @@
   align-items: center;
 
   li {
-    padding: 0 1.125em;
+    margin: 0 1.125em;
 
     &:last-child {
-      padding-right: 0;
+      margin-right: 0;
     }
 
-    &:first-child {
-      padding: 0;
-    }
+    // &:first-child {
+    //   padding: 0;
+    // }
   }
 
   a {
@@ -32,8 +32,8 @@
 }
 
 .form-item {
-  position: absolute;
-  left: 2.09em;
+  position: relative;
+  min-width: 18px;
 
   .panel-list__form a:hover {
     svg {
@@ -42,12 +42,23 @@
   }
 
   &--active {
-    left: -57%;
 
-    .panel-list__form  a {
-      right: 1.125em;
-      transform: translateY(50%);
-      position: absolute;
+
+    .panel-list__form {
+      width: 12.5em;
+      right: 0;
+      bottom: -50%;
+      max-width: 12.5em;
+      height: 2.25em;
+      right: -1.128em;
+      transform: translate(0, 50%);
+
+      a {
+        position: absolute;
+        right: 1.125em;
+        bottom: 50%;
+        transform: translateY(50%);
+      }
     }
 
     .panel-list__form input {
@@ -63,11 +74,12 @@
 
 .panel-list__form {
   display: flex;
-  position: relative;
+  position: absolute;
+  bottom: -50%;
   max-width: 12.5em;
   height: 2.25em;
-
-
+  right: 50%;
+  transform: translate(50%, 50%);
 
   input {
     width: 0;
@@ -78,7 +90,6 @@
   }
 
   a {
-    right: 1.125em;
     display: flex;
     justify-content: center;
     align-items: center;
