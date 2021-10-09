@@ -1,8 +1,8 @@
 {
-  "name": "olimpic",
+  "name": "Brand",
   "version": "1.0.0",
   "private": true,
-  "description": "olimpic project",
+  "description": "Brand project",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.0.0",
     "gulp-csso": "4.0.1",
@@ -58,6 +58,7 @@
     "gulp-sourcemaps": "3.0.0",
     "lightbox2": "^2.11.3",
     "merge": "2.1.1",
+    "start": "^5.1.0",
     "stylelint": "13.12.0"
   }
 }

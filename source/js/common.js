@@ -1,310 +1,380 @@
 
 // -----------------  Слайдера --------------------
-  const Sliders = {
-    MAIN_SLIDER: {
-      ELEMENT: $(".first-slider"),
-      SETTINGS: {
-        accessibility: true,
-        arrows: true,
-        prevArrow: $(".prev-arrow1"),
-        nextArrow: $(".next-arrow1"),
-        dots: false,
-        speed: 750,
-        slidesToShow: 1,
-        infinite: true,
-        fade: true,
-        responsive: [
-          {
-            breakpoint: 768,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1,
-              dots: true,
+const Sliders = {
+  MAIN_SLIDER: {
+    ELEMENT: $(".first-slider"),
+    SETTINGS: {
+      accessibility: true,
+      arrows: true,
+      prevArrow: $(".prev-arrow1"),
+      nextArrow: $(".next-arrow1"),
+      dots: false,
+      speed: 750,
+      slidesToShow: 1,
+      infinite: true,
+      fade: true,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true,
+            customPaging: function (slider, i) {
+              var thumb = jQuery(slider.$slides[i]).data();
+              return '<button>0' + (i + 1) + '</button>';
             },
+            appendDots: $('.slick-slider-dots-one, .first-slider'),
           },
-        ],
-      },
-      // BREAKPOINT: 1600,
-      // CLASSNAME: '',
+        },
+      ],
     },
+    // BREAKPOINT: 1600,
+    // CLASSNAME: '',
+  },
 
-    SECOND_SLIDER: {
-      ELEMENT: $(".second-slider"),
-      SETTINGS: {
-        accessibility: true,
-        arrows: true,
-        prevArrow: $(".prev-arrow2"),
-        nextArrow: $(".next-arrow2"),
-        dots: false,
-        speed: 750,
-        slidesToShow: 1,
-        infinite: true,
-        fade: true,
-        responsive: [
-          {
-            breakpoint: 768,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1,
-              dots: true,
+  SECOND_SLIDER: {
+    ELEMENT: $(".second-slider"),
+    SETTINGS: {
+      accessibility: true,
+      arrows: true,
+      prevArrow: $(".prev-arrow2"),
+      nextArrow: $(".next-arrow2"),
+      dots: false,
+      speed: 750,
+      slidesToShow: 1,
+      infinite: true,
+      fade: true,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true,
+            customPaging: function (slider, i) {
+              var thumb = jQuery(slider.$slides[i]).data();
+              return '<button>0' + (i + 1) + '</button>';
             },
+            appendDots: $('.slick-slider-dots-two, .second-slider'),
           },
-        ],
-      },
-      // BREAKPOINT: 1600,
-      // CLASSNAME: '',
+        },
+      ],
     },
+    // BREAKPOINT: 1600,
+    // CLASSNAME: '',
+  },
 
-    HARD_SLIDER: {
-      ELEMENT: $(".hard-slider"),
-      SETTINGS: {
-        accessibility: true,
-        arrows: true,
-        prevArrow: $(".prev-arrow4"),
-        nextArrow: $(".next-arrow4"),
-        dots: false,
-        speed: 750,
-        slidesToShow: 1,
-        infinite: true,
-        fade: true,
-        asNavFor: $(".nav-second"),
-        responsive: [
-          {
-            breakpoint: 768,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1,
-              dots: true,
+  HARD_SLIDER: {
+    ELEMENT: $(".hard-slider"),
+    SETTINGS: {
+      accessibility: true,
+      arrows: true,
+      prevArrow: $(".prev-arrow4"),
+      nextArrow: $(".next-arrow4"),
+      dots: false,
+      speed: 750,
+      slidesToShow: 1,
+      infinite: true,
+      fade: true,
+      asNavFor: $(".nav-second"),
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true,
+            customPaging: function (slider, i) {
+              var thumb = jQuery(slider.$slides[i]).data();
+              return '<button>0' + (i + 1) + '</button>';
             },
+            appendDots: $('.slick-slider-dots-five,  .slider-wrapper--fifth'),
           },
-        ],
-      },
-      // BREAKPOINT: 1600,
-      // CLASSNAME: '',
+        },
+      ],
     },
+    // BREAKPOINT: 1600,
+    // CLASSNAME: '',
+  },
 
-    NAV_SLIDER: {
-      ELEMENT: $(".nav-second"),
-      SETTINGS: {
-        accessibility: true,
-        asNavFor: $(".hard-slider"),
-        arrows: true,
-        prevArrow: $(".prev-nav"),
-        nextArrow: $(".next-nav"),
-        dots: false,
-        focusOnSelect: true,
-        speed: 750,
-        slidesToShow: 5,
-        infinite: true,
-        responsive: [
-          {
-            breakpoint: 768,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1,
-              centerMode: true,
-              centerPadding: ("40px"),
-              initialSlide: 2,
+  NAV_SLIDER: {
+    ELEMENT: $(".nav-second"),
+    SETTINGS: {
+      accessibility: true,
+      asNavFor: $(".hard-slider"),
+      arrows: true,
+      prevArrow: $(".prev-nav"),
+      nextArrow: $(".next-nav"),
+      dots: false,
+      focusOnSelect: true,
+      speed: 750,
+      slidesToShow: 5,
+      infinite: true,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            centerMode: true,
+            centerPadding: ("40px"),
+            initialSlide: 2,
+          },
+        },
+      ],
+    },
+    // BREAKPOINT: 1600,
+    // CLASSNAME: '',
+  },
+
+  CATALOG_SLIDER: {
+    ELEMENT: $(".catalog-slider"),
+    SETTINGS: {
+      accessibility: true,
+      arrows: true,
+      prevArrow: $(".prev-arrow3"),
+      nextArrow: $(".next-arrow3"),
+      dots: false2,
+      speed: 750,
+      slidesToShow: 1,
+      infinite: true,
+      fade: true,
+      asNavFor: $(".nav-first"),
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true,
+            centerMode: true,
+            customPaging: function (slider, i) {
+              var thumb = jQuery(slider.$slides[i]).data();
+              return '<button>0' + (i + 1) + '</button>';
             },
+            appendDots: $('.slick-slider-dots-four')
           },
-        ],
-      },
-      // BREAKPOINT: 1600,
-      // CLASSNAME: '',
+        },
+      ],
     },
+    // BREAKPOINT: 1600,
+    // CLASSNAME: '',
+  },
 
-    CATALOG_SLIDER: {
-      ELEMENT: $(".catalog-slider"),
-      SETTINGS: {
-        accessibility: true,
-        arrows: true,
-        prevArrow: $(".prev-arrow3"),
-        nextArrow: $(".next-arrow3"),
-        dots: false,
-        speed: 750,
-        slidesToShow: 1,
-        infinite: true,
-        fade: true,
-        asNavFor: $(".nav-first"),
-        responsive: [
-          {
-            breakpoint: 768,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1,
-              dots: true,
-              centerMode: true,
-            },
+  NAV_SLIDER_FIRST: {
+    ELEMENT: $(".nav-first"),
+    SETTINGS: {
+      accessibility: true,
+      asNavFor: $(".catalog-slider"),
+      arrows: true,
+      prevArrow: $(".prev-nav2"),
+      nextArrow: $(".next-nav2"),
+      dots: false,
+      focusOnSelect: true,
+      speed: 750,
+      slidesToShow: 6,
+      infinite: true,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            centerMode: true,
+            centerPadding: ("40px"),
+            initialSlide: 2,
           },
-        ],
-      },
-      // BREAKPOINT: 1600,
-      // CLASSNAME: '',
+        },
+      ],
     },
+    // BREAKPOINT: 1600,
+    // CLASSNAME: '',
+  },
+};
 
-    NAV_SLIDER_FIRST: {
-      ELEMENT: $(".nav-first"),
-      SETTINGS: {
-        accessibility: true,
-        asNavFor: $(".catalog-slider"),
-        arrows: true,
-        prevArrow: $(".prev-nav2"),
-        nextArrow: $(".next-nav2"),
-        dots: false,
-        focusOnSelect: true,
-        speed: 750,
-        slidesToShow: 6,
-        infinite: true,
-        responsive: [
-          {
-            breakpoint: 768,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1,
-              centerMode: true,
-              centerPadding: ("40px"),
-              initialSlide: 2,
-            },
-          },
-        ],
-      },
-      // BREAKPOINT: 1600,
-      // CLASSNAME: '',
-    },
-  };
+function initialazeSlickSlider(slider) {
+  const { BREAKPOINT, SETTINGS, ELEMENT } = slider;
+  (document.documentElement.clientWidth <= BREAKPOINT ||
+    BREAKPOINT === undefined) &&
+    ELEMENT.slick(SETTINGS);
+}
 
-  function initialazeSlickSlider(slider) {
-    const { BREAKPOINT, SETTINGS, ELEMENT } = slider;
-    (document.documentElement.clientWidth <= BREAKPOINT ||
-      BREAKPOINT === undefined) &&
-      ELEMENT.slick(SETTINGS);
+function toggleSlider(slider) {
+  const { BREAKPOINT, ELEMENT, SETTINGS } = slider;
+  document.documentElement.clientWidth > BREAKPOINT &&
+    ELEMENT.hasClass("slick-initialized") &&
+    ELEMENT.slick("unslick");
+  document.documentElement.clientWidth <= BREAKPOINT &&
+    !ELEMENT.hasClass("slick-initialized") &&
+    ELEMENT.slick(SETTINGS);
+}
+
+function toggleExtraClass(slider) {
+  const { BREAKPOINT, ELEMENT, CLASSNAME } = slider;
+  document.documentElement.clientWidth > BREAKPOINT &&
+    !ELEMENT.hasClass(CLASSNAME) &&
+    ELEMENT.addClass(CLASSNAME);
+  document.documentElement.clientWidth <= BREAKPOINT &&
+    ELEMENT.hasClass(CLASSNAME) &&
+    ELEMENT.removeClass(CLASSNAME);
+}
+
+initialazeSlickSlider(Sliders.MAIN_SLIDER);
+initialazeSlickSlider(Sliders.SECOND_SLIDER);
+initialazeSlickSlider(Sliders.HARD_SLIDER);
+initialazeSlickSlider(Sliders.NAV_SLIDER);
+initialazeSlickSlider(Sliders.CATALOG_SLIDER);
+initialazeSlickSlider(Sliders.NAV_SLIDER_FIRST);
+
+
+
+$(window).bind('load', function () {
+  stickyHeader();
+});
+
+//* Scroll
+$(window).scroll(function () {
+  stickyHeader();
+});
+
+//* Register
+function damaxRegister() {
+  stickyHeader();
+}
+damaxRegister();
+
+function stickyHeader() {
+
+  if ($(window).scrollTop() >= $(".second-sec").offset().top && $(window).scrollTop() <= ($(".second-sec").offset().top + $(".second-sec").outerHeight())) {
+    $('.section-nav-two').addClass("sticky");
+  }
+  else {
+    $('.section-nav-two').removeClass("sticky");
   }
 
-  function toggleSlider(slider) {
-    const { BREAKPOINT, ELEMENT, SETTINGS } = slider;
-    document.documentElement.clientWidth > BREAKPOINT &&
-      ELEMENT.hasClass("slick-initialized") &&
-      ELEMENT.slick("unslick");
-    document.documentElement.clientWidth <= BREAKPOINT &&
-      !ELEMENT.hasClass("slick-initialized") &&
-      ELEMENT.slick(SETTINGS);
+
+  if ($(window).scrollTop() >= $(".first-sec").offset().top && $(window).scrollTop() <= ($(".first-sec").offset().top + $(".first-sec").outerHeight())) {
+    $('.section-nav-one').addClass("sticky");
+  }
+  else {
+    $('.section-nav-one').removeClass("sticky");
   }
 
-  function toggleExtraClass(slider) {
-    const { BREAKPOINT, ELEMENT, CLASSNAME } = slider;
-    document.documentElement.clientWidth > BREAKPOINT &&
-      !ELEMENT.hasClass(CLASSNAME) &&
-      ELEMENT.addClass(CLASSNAME);
-    document.documentElement.clientWidth <= BREAKPOINT &&
-      ELEMENT.hasClass(CLASSNAME) &&
-      ELEMENT.removeClass(CLASSNAME);
+
+  if ($(window).scrollTop() >= $(".frouth-sec").offset().top && $(window).scrollTop() <= ($(".frouth-sec").offset().top + $(".frouth-sec").outerHeight())) {
+    $('.section-nav-frouth').addClass("sticky");
+  }
+  else {
+    $('.section-nav-frouth').removeClass("sticky");
   }
 
-  initialazeSlickSlider(Sliders.MAIN_SLIDER);
-  initialazeSlickSlider(Sliders.SECOND_SLIDER);
-  initialazeSlickSlider(Sliders.HARD_SLIDER);
-  initialazeSlickSlider(Sliders.NAV_SLIDER);
-  initialazeSlickSlider(Sliders.CATALOG_SLIDER);
-  initialazeSlickSlider(Sliders.NAV_SLIDER_FIRST);
+  if ($(window).scrollTop() >= $(".fifth-sec").offset().top && $(window).scrollTop() <= ($(".fifth-sec").offset().top + $(".fifth-sec").outerHeight())) {
+    $('.section-nav-fifth').addClass("sticky");
+  }
+  else {
+    $('.section-nav-fifth').removeClass("sticky");
+  }
+
+}
 
 
+// -----------------  Селект  --------------------
 
-  // -----------------  Селект  --------------------
+// переменная не переназначается, поэтому используем const
+// используем querySelectorAll, чтобы собрать массив со всеми сущностями .select
+const select = document.querySelectorAll(".select");
 
-  // переменная не переназначается, поэтому используем const
-  // используем querySelectorAll, чтобы собрать массив со всеми сущностями .select
-  const select = document.querySelectorAll(".select");
+// если массив не пустой, пробегаемся в цикле по каждой найденой сущности
+if (select.length) {
+  select.forEach((item) => {
+    // достаем из текущей сущности .select__current
+    const selectCurrent = item.querySelector(".select__current");
 
-  // если массив не пустой, пробегаемся в цикле по каждой найденой сущности
-  if (select.length) {
-    select.forEach((item) => {
-      // достаем из текущей сущности .select__current
-      const selectCurrent = item.querySelector(".select__current");
+    item.addEventListener("click", (event) => {
+      const el = event.target.dataset.choice;
+      const text = event.target.innerText;
 
-      item.addEventListener("click", (event) => {
-        const el = event.target.dataset.choice;
-        const text = event.target.innerText;
+      // Проверяем является ли это choosen и не выбрано ли его значение уже
+      if (el === "choosen" && selectCurrent.innerText !== text) {
+        selectCurrent.innerText = text;
+      }
 
-        // Проверяем является ли это choosen и не выбрано ли его значение уже
-        if (el === "choosen" && selectCurrent.innerText !== text) {
-          selectCurrent.innerText = text;
-        }
-
-        item.classList.toggle("is-active");
-      });
+      item.classList.toggle("is-active");
     });
+  });
+}
+
+$('.favorite-bnt').click(function () {
+  $(this).toggleClass('favorite-bnt--active');
+})
+
+// -----------------  Гамбургер  --------------------
+
+var menu = $(".mobile-menu");
+var more = $(".mobile-more__btn");
+var body = $("body");
+
+more.click(function (event) {
+  more.toggleClass("mobile-more__btn--active"),
+    menu.toggleClass("mobile-menu--active");
+  body.toggleClass("body--fixed");
+  $('.mobile-search').removeClass("mobile-search--active");
+});
+
+// ------------ Поиск --------------
+
+$(".search-btn").click(function (event) {
+  event.preventDefault();
+  $(".form-item").toggleClass("form-item--active");
+  $(".opacity-item").toggleClass("opacity-item--active");
+
+});
+
+var header = $('.header-box');
+var main = $('.main');
+scrollPrev = 0;
+
+$(window).scroll(function () {
+  var scrolled = $(window).scrollTop();
+
+  if (scrolled > 150 && scrolled > scrollPrev) {
+    header.addClass('out');
+    main.addClass('out');
+  } else {
+    header.removeClass('out');
+    main.removeClass('out');
   }
+  scrollPrev = scrolled;
+});
 
-  $('.favorite-bnt').click(function(){
-    $(this).toggleClass('favorite-bnt--active');
-  })
+const buttons = [...document.querySelectorAll(".mobile-replace")]; // --- масассив кнопок
+const newBody = document.querySelector(".replace-btn");
+const oldBody = document.querySelector(".main-slide__bottom");
 
-  // -----------------  Гамбургер  --------------------
-
-  var menu = $(".mobile-menu");
-  var more = $(".mobile-more__btn");
-  var body = $("body");
-
-  more.click(function (event) {
-    more.toggleClass("mobile-more__btn--active"),
-      menu.toggleClass("mobile-menu--active");
-    body.toggleClass("body--fixed");
-    $('.mobile-search').removeClass("mobile-search--active");
-  });
-
-  // ------------ Поиск --------------
-
-  $(".search-btn").click(function (event) {
-    event.preventDefault();
-    $(".form-item").toggleClass("form-item--active");
-    $(".opacity-item").toggleClass("opacity-item--active");
-
-  });
-
-  var header = $('.header-box');
-  var main = $('.main');
-	scrollPrev = 0;
-
-  $(window).scroll(function() {
-    var scrolled = $(window).scrollTop();
-
-    if ( scrolled > 350 && scrolled > scrollPrev ) {
-      header.addClass('out');
-      main.addClass('out');
-    } else {
-      header.removeClass('out');
-      main.removeClass('out');
-    }
-    scrollPrev = scrolled;
-  });
-
- const buttons = [...document.querySelectorAll(".mobile-replace")]; // --- масассив кнопок
- const newBody = document.querySelector(".replace-btn");
- const oldBody = document.querySelector(".main-slide__bottom");
-
- let slides = document.querySelectorAll(".fifth-slide");
- const arrSlides = [...slides];
+let slides = document.querySelectorAll(".fifth-slide");
+const arrSlides = [...slides];
 
 
 
 
 
- window.addEventListener('DOMContentLoaded', () => {
-  if ( $(window).width() >= 320 && $(window).width() < 768 ) {
-    buttons.forEach(function(button){   // i - index
+window.addEventListener('DOMContentLoaded', () => {
+  if ($(window).width() >= 320 && $(window).width() < 768) {
+    buttons.forEach(function (button) {   // i - index
       newBody.insertAdjacentElement("afterbegin", button);
     });
 
   } else {
-    buttons.forEach(function(button){   // i - index
+    buttons.forEach(function (button) {   // i - index
       oldBody.insertAdjacentElement("afterbegin", button);
     });
   };
 });
 
 window.addEventListener('DOMContentLoaded', () => {
-  if ( $(window).width() >= 320 && $(window).width() < 576 ) {
-    arrSlides.forEach(function(slide) {
+  if ($(window).width() >= 320 && $(window).width() < 576) {
+    arrSlides.forEach(function (slide) {
       const fifthBody = slide.querySelector(".main-slide__descr--replace");
       const imageBlock = slide.querySelector(".main-slide__image--replace");
       fifthBody.insertAdjacentElement("afterbegin", imageBlock);
@@ -319,8 +389,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 window.addEventListener('DOMContentLoaded', () => {
-  if ( $(window).width() > 320 && $(window).width() < 576 ) {
-    arrSlides.forEach(function(slide) {
+  if ($(window).width() > 320 && $(window).width() < 576) {
+    arrSlides.forEach(function (slide) {
       const fifthBody = slide.querySelector(".main-slide__descr--replace");
       const imageBlock = slide.querySelector(".main-slide__image--replace");
       fifthBody.insertAdjacentElement("afterbegin", imageBlock);
@@ -329,8 +399,8 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 window.addEventListener('resize', () => {
-  if ( $(window).width() > 320 && $(window).width() < 576 ) {
-    arrSlides.forEach(function(slide) {
+  if ($(window).width() > 320 && $(window).width() < 576) {
+    arrSlides.forEach(function (slide) {
       const fifthBody = slide.querySelector(".main-slide__descr--replace");
       const imageBlock = slide.querySelector(".main-slide__image--replace");
       fifthBody.insertAdjacentElement("afterbegin", imageBlock);
@@ -340,26 +410,26 @@ window.addEventListener('resize', () => {
 });
 
 window.addEventListener('resize', () => {
-  if ( $(window).width() < 768 ) {
-    buttons.forEach(function(button){   // i - index
+  if ($(window).width() < 768) {
+    buttons.forEach(function (button) {   // i - index
       newBody.insertAdjacentElement("afterbegin", button);
     });
   } else {
-    buttons.forEach(function(button){   // i - index
+    buttons.forEach(function (button) {   // i - index
       oldBody.insertAdjacentElement("afterbegin", button);
     });
   };
 });
 
-$(window).scroll(function(){
-  if($(this).scrollTop() > 500) {
-      $('.top-link').fadeIn();
+$(window).scroll(function () {
+  if ($(this).scrollTop() > 500) {
+    $('.top-link').fadeIn();
   } else {
-      $('.top-link').fadeOut();
+    $('.top-link').fadeOut();
   }
 });
 
-$("a[href='#top']").click(function() {
+$("a[href='#top']").click(function () {
   $("html, body").animate({ scrollTop: 0 }, "slow");
   return false;
 });

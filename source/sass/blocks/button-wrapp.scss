@@ -7,7 +7,7 @@
 }
 
 .grey-btn {
-  background: linear-gradient(135deg, #DAE2E6 0%, #E9EDF0 100%);
+  background: linear-gradient(135deg, #dae2e6 0%, #e9edf0 100%);
   box-shadow: -4px -4px 16px rgba(255, 255, 255, 0.7), 4px 4px 16px rgba(96, 117, 128, 0.2);
   border-radius: 4px;
   height: 3em;
@@ -32,6 +32,9 @@
   flex-shrink: 0;
 
   &--plus {
-
   }
+}
+
+.section-nav {
+  display: none;
 }
