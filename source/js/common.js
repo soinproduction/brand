@@ -135,7 +135,7 @@ const Sliders = {
       arrows: true,
       prevArrow: $(".prev-arrow3"),
       nextArrow: $(".next-arrow3"),
-      dots: false2,
+      dots: false,
       speed: 750,
       slidesToShow: 1,
       infinite: true,
@@ -153,7 +153,7 @@ const Sliders = {
               var thumb = jQuery(slider.$slides[i]).data();
               return '<button>0' + (i + 1) + '</button>';
             },
-            appendDots: $('.slick-slider-dots-four')
+            appendDots: $('.slick-slider-dots-four'),
           },
         },
       ],
